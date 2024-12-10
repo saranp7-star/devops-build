@@ -1,8 +1,9 @@
----
-version: '3'
+version: '3.8' 
+
 services:
-react-capstone:
-image: "react-capstone"
-ports:
-- "80:80"
----
+  web:
+    image: test:latest
+    container_name: guvi-container
+    ports:
+      - "80:80" 
+    restart: unless-stopped 
